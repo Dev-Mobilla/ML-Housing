@@ -5,7 +5,8 @@
   "main": "mlhousingloan.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon mlhousingloan.js"
+    "dev": "nodemon mlhousingloan.js",
+    "start": "node mlhousingloan.js"
   },
   "keywords": [
     "mlhuillier",
