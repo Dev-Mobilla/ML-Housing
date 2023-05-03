@@ -14,6 +14,10 @@
             <td><span style="font-weight: 600;padding:5px 0px;font-size:0.9rem"> Date:</span></td>
             <td style="padding:5px 0px;font-size:0.9rem">{{ data.date }}</td>
         </tr>
+         <tr>
+            <td><span style="font-weight: 600;padding:5px 0px;font-size:0.9rem"> Applied For:</span></td>
+            <td style="padding:5px 0px;font-size:0.9rem">{{ data.applicationType }}</td>
+        </tr>
     </table>
     <br>
     <div>
@@ -74,6 +78,11 @@
                     <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Source of Funds</td>
                     <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
                         {{data.source_of_funds}}</td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Filipino Resident</td>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
+                        {{data.resident}}</td>
                 </tr>
             </tbody>
         </table>

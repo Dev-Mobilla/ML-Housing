@@ -27,15 +27,18 @@ const SendEmail = async (options) => {
 }
 const SendEmailNotificationSender = async (application, attachment) => {
 
+    let appType = application.applicationType
+
     let send = SendEmail(
         {
-            subject: `New Application: ${application.applicationId}`,
+            subject: `${appType.toUpperCase()}: ${application.applicationId}`,
             to: process.env.SYSTEM_EMAIL,
             from: "'ML Housing Loan Service <donotreply@mlhuillier.com>'",
             template: "senderReceipt",
             context: {
                 appId: application.applicationId,
-                date: application.date
+                date: application.date,
+                applicationType: application.applicationType
             },
             attachments: [{
                 filename: `ML HOUSING LOAN ${application.applicationId}.pdf`,
