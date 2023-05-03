@@ -10,6 +10,8 @@ const sequelize = require('./config/dbConfig');
 const api = require('./Router/api-router');
 const web  = require('./Router/web-router');
 
+const path = require('path');
+
 app.use(cors({
     // allowedHeaders: true,
     origin: 'http://127.0.0.1:27142',
@@ -26,7 +28,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/apply-loan', function(req, res) {
-    res.render('applicationForm')
+//     res.render('applicationForm')
+    res.sendFile( path.resolve('Views/applicationForm.ejs') );
 })
 
 app.use('/api', api.ROUTER);
