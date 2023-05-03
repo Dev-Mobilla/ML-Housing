@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family:Arial, Helvetica, sans-serif;">
+<div style="border: 1px solid #ebebeb;width: 100%;padding: 24px 0 16px 0;background-color: #f5f5f5;
+    text-align: center;font-family:Arial, Helvetica, sans-serif;">
+    <div class="header">
+        <div>
+            <img src="https://d33wubrfki0l68.cloudfront.net/09bb9e6f9a3b78b93d963887e4d709e7c97da0bc/11cbf/img/ml-logo.png"
+                alt="ml-logo" width="260">
+        </div>
+    </div>
+    <br>
+    <div
+        style="width:95%; background: white; border-top:10px solid red;margin:auto;padding-top: 25px;padding-bottom:25px;border-radius:3px">
+        <div style="font-size: 1.5rem;letter-spacing: 3px;word-spacing:3px; text-center">
+            <h4>ML Housing Loan</h4>
+        </div>
+        <div>
+            <p style="font-weight: 600">Application Number: <span style="font-weight: 400">{{appId}}</span></p>
+            <p style="font-weight: 600">Date: <span style="font-weight: 400">{{application.date}}</span></p>
+        </div>
+        <br>
+        <br>
+
+        <table id="customers"
+            style="margin:auto;text-align:justify;border-collapse: collapse;width:60%; table-layout: fixed">
+            <thead>
+                <tr style="border: 1px solid #c1c1c1">
+                    <th style="padding-left:10px">
+                        <p style="font-weight: 600;font-size:1.3rem:">PERSONAL INFORMATION</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">First Name</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.firstname}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Middle Name</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.middlename}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Last Name</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.lastname}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Civil Status</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.civil_status}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Date of Birth</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.birth_date}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Mother's Maiden Name</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.name_of_mother}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Gender</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.gender}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Gross Household Monthly Income</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.gross_monthly_income}}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Source of Funds</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.source_of_funds}}</td>
+            </tr>
+        </table>
+        <!-- CURRENT RESIDENCE -->
+        <br>
+        <table style="text-align:justify;border-collapse: collapse;width:60%; table-layout: fixed;margin:auto;">
+            <thead>
+                <tr style="border: 1px solid #c1c1c1">
+                    <th style="padding:10px">
+                        <p style="font-weight: 600;font-size:1.3rem:">CURRENT RESIDENCE</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;border: 1px solid #c1c1c1">Address</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600;">{{application.address}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Length of Stay</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.length_of_stay}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Type of Residence</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.residence_type}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Mobile No.</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.mobile_number}}</td>
+            </tr>
+            <tr>
+                <td style="padding:10px;border: 1px solid #c1c1c1;">Email Address</td>
+                <td style="padding:10px;border: 1px solid #c1c1c1;font-weight:600">{{application.email}}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <p style="text-align: center;font-style: italic;color: red; font-size: 0.8rem">This is a sytem generated email.
+        Please do not reply.</p>
+</div>
+</body>
+</html>

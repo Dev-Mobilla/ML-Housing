@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/diamond.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+
+<body style="background-image: url('./assets/ml-building.jpg'); background-size: cover;background-repeat:no-repeat">
+    <div class="overlay-container" id="overlay-container">
+        <div class="overlay">
+            <div class="d-flex justify-content-center align-items-center" style="flex-direction: column;">
+                <!-- <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;"> -->
+                    <div>
+                        <img src="./assets/loading.gif" alt="loading" width="160">
+                    </div>
+                    <div>
+                        <p class="sr-only" style="color: white;font-weight: 600;font-size: 1.2rem;letter-spacing: 2px;word-spacing: 2px;text-align: center;">Validating your request...</p>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mx-auto">
+        <div class="card mx-auto p-4" style="width: 95%;">
+            <br>
+            <div class="row mx-auto">
+                <img src="../assets/logo-ml.png" alt="" class="img-fluid mx-auto" id="logo">
+            </div>
+            <h2 class="text-center mt-1" style="letter-spacing:6px" id="header">HOUSING LOAN</h2>
+            <br>
+            <br>
+            <div class="container">
+                <p style="font-weight:bold"><span style="color:red">*</span> Fill out required fields. <span>Input <span
+                            style="font-weight:500;color:red">NA</span> if not applicable</span></p>
+
+
+                <form id="form">
+                    <!-- <form action="" class="was-validated"> -->
+                    <label for="citizenship"><span style="color:red">*</span> <b>Are you a Filipino citizen or a
+                            foreigner residing in the Philippines?</b></label>
+                    <div class="form-check mt-2">
+                        <div class="col">
+                            <input type="radio" id="myCheckYes" name="citizenship" value="yes" onclick="checkBox()"
+                                class="form-check-input" required>&nbspYes
+                            <!-- <p id="text" style="display:none;"></p>  -->
+                        </div>
+                        <div class="col">
+                            <input type="radio" id="myCheckNo" name="citizenship" value="no" onclick="checkBox()"
+                                class="form-check-input">&nbspNo
+                            <p id="text" style="display:none;font-size: 14px;font-style: italic;">You need to be a
+                                Filipino resident or a foreigner living in the Philippines.</p>
+                        </div>
+                    </div>
+                    <!-- Q1 -->
+                    <br>
+
+                    <div>
+
+                        <h4>Personal Information</h4>
+                        <br>
+                        <!-- FIRST ROW -->
+                        <div class="row justify-content-md-center">
+                            <!-- FIRSTNAME -->
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="fname"><span style="color:red">*</span> First Name:</label>
+                                <input type="text" class="form-control form-control-sm input" name="firstname" required>
+                            </div>
+                            <!-- MIDDLENAME -->
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="mname"><span style="color:red">*</span> Middle Name: </label>
+                                <input type="text" class="form-control form-control-sm input" name="middlename"
+                                    required>
+                            </div>
+                            <!-- LASTNAME -->
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="lname"><span style="color:red">*</span> Last Name:</label>
+                                <input type="text" class="form-control form-control-sm input" name="lastname" required>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- SECOND ROW -->
+                        <div class="row justify-content-md-center">
+                            <!-- CIVIL STATUS -->
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="status"><span style="color:red">*</span> Civil Status:</label>
+                                <select name="civil_status" id="civilstatus" class="form-select form-select-sm input"
+                                    required>
+                                    <option value="">- Select Status -</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Annuled">Annuled</option>
+                                    <option value="Widowed">Widowed</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Separated">Separated</option>
+                                </select>
+                            </div>
+                            <!-- DATE OF BIRTH -->
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="dob"><span style="color:red">*</span> Date of Birth:</label>
+                                <input type="date" onfocus="this.showPicker()" onchange="datePick(this.value)"
+                                    class="form-control form-control-sm input" required id="dateBirth"
+                                    name="birth_date">
+                                <div class="invalid-feedback" id="birthdateError">
+                                    <i>You must be 21 years old and above</i>
+                                </div>
+                            </div>
+                            <!-- MOTHER'S NAME -->
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="mmname"><span style="color:red">*</span> Mother's Maiden Name:</label>
+                                <input type="text" class="form-control form-control-sm input" required
+                                    name="name_of_mother">
+                            </div>
+                        </div>
+                        <br>
+                        <!-- THIRD ROW -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="gender"><span style="color:red">*</span> Gender:</label>
+                                <select name="gender" id="gender" class="form-select form-select-sm input" required>
+                                    <option value="">- Select Gender -</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="ghmi"><span style="color:red">*</span> Gross Household Monthly
+                                    Income:</label>
+                                <!-- <input type='number' inputMode='decimal' onFocus="this.type='number'; this.value=this.lastValue"
+                                onBlur="this.type=''; this.lastValue=this.value; this.value=this.value==''?'':(+this.value).toLocaleString()" class="form-control form-control-sm" required>
+                                <div class="invalid-feedback">
+                                    <i>Please input income</i>
+                                </div> -->
+                                <input onkeydown="return onkeydownAmount()" onchange="amountChange(this.value)"
+                                    class="form-control form-control-sm input" required id="grossIncome"
+                                    name="gross_monthly_income">
+                                <div class="invalid-feedback">
+                                    <i>Please input income</i>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="funds"><span style="color:red">*</span> Source of Funds:</label>
+                                <select name="source_of_funds" id="sourceoffunds"
+                                    class="form-select form-select-sm input" required>
+                                    <option value="">- Select Source of Funds -</option>
+                                    <option value="Salary">Salary</option>
+                                    <option value="Business Revenue">Business Revenue</option>
+                                    <option value="Commission">Commission</option>
+                                    <option value="Professional Fees">Professional Fees</option>
+                                    <option value="Remitance">Remitance</option>
+                                    <option value="Pension">Pension</option>
+                                    <option value="Savings/Deposits/Investment">Savings/Deposits/Investment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--  -->
+                    <br>
+                    <br>
+                    <div>
+                        <h4>Current Residence</h4>
+                        <br>
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="country"><span style="color:red">*</span> Country:</label>
+                                <input type="text" class="form-control form-control-sm input" required name="country">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="st/pr"><span style="color:red">*</span> State/Province:</label>
+                                <input type="text" class="form-control form-control-sm input" required name="province">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="cit/tow"><span style="color:red">*</span> City/Town:</label>
+                                <input type="text" class="form-control form-control-sm input" required name="city">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center">
+
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="dis/brgy"><span style="color:red">*</span> District/Barangay:</label>
+                                <input type="text" class="form-control form-control-sm input" required name="barangay">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="houseno"><span style="color:red">*</span> House No./Unit No./Building
+                                    Name/Street:</label>
+                                <input type="text" class="form-control form-control-sm input" required name="houseNo">
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="los"><span style="color:red">*</span> Length of Stay:</label>
+                                <select name="length_of_stay" id="los" class="form-select form-select-sm input"
+                                    required>
+                                    <option value="">- Select Length of Stay - </option>
+                                    <option value="Less than a year">Less than a year</option>
+                                    <option value="1 to 2 years">1 to 2 Years</option>
+                                    <option value="2 to 5 years">2 to 5 Years</option>
+                                    <option value="5 years">5 years or more</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="tor"><span style="color:red">*</span> Type of Residence:</label>
+                                <select name="residence_type" id="tor" class="form-select form-select-sm input"
+                                    required>
+                                    <option value="">- Select Type of Residence -</option>
+                                    <option value="Free or Living with Parents/Relatives">Used Free or Living with
+                                        Parents/Relatives</option>
+                                    <option value="Owned">Owned (Fully Paid)</option>
+                                    <option value="Rent">Renting</option>
+                                    <option value="Owned (Amortizing a Housing Loan)">Owned (Amortizing a Housing Loan)
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12 mb-3">
+                                <label for="mob no."><span style="color:red">*</span> Mobile No:</label>
+                                <input type="tel" class="form-control form-control-sm input" id="phone" required
+                                    name="mobile_number">
+                                <!-- <span id="valid-msg" class="hide">✓ Valid</span>
+                                <span id="error-msg" class="hide"></span> -->
+                                <div class="invalid-feedback" id="mobileInvalid">
+                                    <i></i>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-xs-12">
+                                <label for="emailadd"><span style="color:red">*</span> Email Address:</label>
+                                <input type="email" class="form-control form-control-sm input" required name="email">
+                                <div class="invalid-feedback">
+                                    <i>Please input a valid email address</i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" required>
+                        <label for="dps"><span style="color:red">*</span> I agree that I have read that <a
+                                href="https://mlhuillier.com/privacy-notice/" form-check-label>Privacy
+                                Policy</a> </label>
+                        <div class="invalid-feedback">
+                            <i>You must agree before submitting.</i>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div class="row justify-content-md-center mt-3">
+                            <div class="col-sm-12 col-md-3 col-xs-12 mb-2">
+                                <button type="submit" class="btn btn-danger" id="buttonSbmt">Submit Application</button>
+                                <!-- <button type="submit" onclick="alert('In five to seven business days, we will contact you regarding your application for approval')" class="btn btn-danger">Submit</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </form>
+                <br>
+            </div>
+            <div class="toast-container position-fixed top-0 end-0 p-3 mx-auto">
+                <div id="liveToast" class="toast align-items-center border-0 bg-danger" role="alert"
+                    aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body" id="toast-body">
+
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                            aria-label="Close" onclick="subMitForm()"></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <br>
+        <br>
+        <div class="row text-muted pt-2 pb-2 text-center">
+            <p class="m-0" style="font-size: 0.9rem;color: rgb(172, 169, 169)">Copyright © <span id="footer-year"></span> MLhuillier Financial Services, Inc.</p>
+            <p class="m-0" style="font-size: 0.9rem;color: rgb(172, 169, 169)">All Rights Reserved.</p>
+        </div>
+        <br>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="./scripts/script.js">
+
+        </script>
+
+</body>
+
+
+</html>

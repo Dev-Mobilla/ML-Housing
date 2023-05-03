@@ -1,0 +1,81 @@
+
+/* CSS Document */
+body{
+	background-image: url('../assets/ml-building.jpg'); 
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+
+.iti.iti--allow-dropdown{
+    display: block;
+}
+
+.iti__country-name {
+    color: black
+}
+
+#form{
+	text-align: justify
+}
+
+.card-title{
+	letter-spacing: 5px
+}
+
+#text-no{
+	display: none
+}
+
+.form-control.form-control-sm, .form-check-input, #emailHelp1{
+	margin-bottom: 5px
+}
+.form-check-label{
+	margin-top: 5px
+}
+
+.overlay-container{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0%;
+    left: 0px;
+    background-color: rgb(34, 34, 34);
+    opacity: 0.9;
+    filter: alpha(opacity=50);
+
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 30%;
+    left: 0px;
+}
+
+.sr-only{
+	color: white;font-weight: 600;font-size: 1.2rem;letter-spacing: 2px;word-spacing: 2px;text-align: center;
+}
+
+#logo {
+    /* width: 70%; */
+    width: 40%;
+}
+
+.toast.align-items-center{
+	width: 100%;
+}
+
+/* .card {
+    background: #121212df;
+} */
+
+@media only screen and (max-width: 600px) {
+    #logo {
+        /* display: none; */
+        width: 80%;
+    }
+}

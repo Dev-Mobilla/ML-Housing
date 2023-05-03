@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply Loan</title>
+<link rel="icon" href="../assets/diamond.png" type="image/png">
+<link href="../css/application-style.css" rel="stylesheet">
+<!-- Bootstrap --> 
+<!--<link href="../css/bootstrap-4.4.1.css" rel="stylesheet">-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+<!-- body code goes here -->
+<div class="overlay-container" id="overlay-container">
+  <div class="overlay">
+    <div class="d-flex justify-content-center align-items-center" style="flex-direction: column;"> 
+      <!-- <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;"> -->
+      <div> <img src="../assets/loading.gif" alt="loading" width="160"> </div>
+      <div>
+        <p class="sr-only">Validating your request...</p>
+      </div>
+      <!-- </div> --> 
+    </div>
+  </div>
+</div>
+<div class="container mt-5 mb-5">
+  <div class="card text-center mx-auto">
+    <div class="card-header pt-3 pb-3">
+      <div class="row mx-auto"> <img src="../assets/hlLogo.png" 
+			   class="img-fluid mx-auto" alt="ml-logo" id="logo"> 
+		</div>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">HOUSING LOAN</h4>
+      <p class="card-text mt-4"> <span class="text-danger">*</span> Fill out required fields </p>
+      <form class="mt-4" id="form">
+        <div class="form-group">
+          <div class="row justify-content-center">
+            <div class="col-lg-4">
+              <label for="applicationType" class="form-check-label"><span class="text-danger">*</span> I want to apply for (application type)</label>
+              <select name="applicationType" id="applicationType" class="form-select form-select-sm"
+                                    required onChange="selectAppType(this.value)">
+                <option value="">- Select Application Type -</option>
+                <option value="Refinance">Refinance</option>
+                <option value="Condo">Condo</option>
+                <option value="Housing Loan">Housing Loan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+		  <br>
+		  <br>
+        <div id="formRadioInpt">
+          <label class="form-check-label" for="exampleCheck1"><span class="text-danger">*</span> Are you a Filipino citizen or a foreigner residing in the Philippines?</label>
+          <div class="form-check">
+            <div class="col-lg-12">
+              <input type="radio" class="form-check-input" name="citizenship" value="yes" id="myCheckYes" onClick="checkBox()">
+              <label> Yes</label>
+            </div>
+            <div class="col-lg-12">
+              <input type="radio" class="form-check-input" name="citizenship" value="no" id="myCheckNo" onClick="checkBox()">
+              <label> No</label>
+              <p id="text-no" style="font-size: 14px;font-style: italic;" class="text-danger">You need to be a
+                Filipino resident or a foreigner living in the Philippines.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="email" class="form-check-label"><span class="text-danger">*</span> Email address</label>
+              <input type="email" class="form-control form-control-sm" id="email" required name="email">
+              <small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone else.</small> </div>
+            <div class="col-lg-6">
+              <label for="email" class="form-check-label"><span class="text-danger">*</span>Confirm Email address</label>
+              <input type="email" class="form-control form-control-sm" id="confirmemail" required name="confirmemail" onBlur="confirmEmail(this.value)">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="mobileno" class="form-check-label"><span class="text-danger">*</span> Mobile No.</label>
+              <input type="tel" class="form-control form-control-sm" id="mobile" required name="mobileno">
+            </div>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+          <h5>Personal Information</h5>
+          <div class="row mt-4">
+            <div class="col-lg-4">
+              <label for="firstname" class="form-check-label"><span class="text-danger">*</span> First Name</label>
+              <input type="text" class="form-control form-control-sm" id="firstname" required name="firstname">
+            </div>
+            <div class="col-lg-4">
+              <label for="middlename" class="form-check-label"><span class="text-danger">*</span> Middle Name</label>
+              <input type="text" class="form-control form-control-sm" id="middlename" required name="middlename">
+            </div>
+            <div class="col-lg-4">
+              <label for="lastname" class="form-check-label"><span class="text-danger">*</span> Last Name</label>
+              <input type="text" class="form-control form-control-sm" id="lastname" required name="lastname">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-4">
+              <label for="civilstatus" class="form-check-label"><span class="text-danger">*</span> Civil Status</label>
+              <select name="civil_status" id="civilstatus" class="form-select form-select-sm"
+                                    required>
+                <option value="">- Select Status -</option>
+                <option value="Single">Single</option>
+                <option value="Annuled">Annuled</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Married">Married</option>
+                <option value="Separated">Separated</option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <label for="birthdate" class="form-check-label"><span class="text-danger">*</span> Date Of Birth</label>
+              <input type="date" class="form-control form-control-sm" id="birthdate" required name="birthdate" onfocus="this.showPicker()" onchange="datePick(this.value)">
+            </div>
+            <div class="col-lg-4">
+              <label for="motherName" class="form-check-label"><span class="text-danger">*</span> Mother's Maiden Name</label>
+              <input type="text" class="form-control form-control-sm" id="motherName" required name="motherName">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-4">
+              <label for="gender" class="form-check-label"><span class="text-danger">*</span> Gender</label>
+              <select name="gender" id="gender" class="form-select form-select-sm" required>
+                <option value="">- Select Gender -</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <label for="monthlyIncome" class="form-check-label"><span class="text-danger">*</span> Gross Household Monthly Icome</label>
+              <input type="text" class="form-control form-control-sm" id="monthlyIncome" required name="income" onkeydown="return onkeydownAmount()" onchange="amountChange(this.value)">
+            </div>
+            <div class="col-lg-4">
+              <label for="fundSource" class="form-check-label"><span class="text-danger">*</span> Source Of Funds</label>
+              <select name="source_of_funds" id="sourceoffunds"
+                                    class="form-select form-select-sm" required>
+                <option value="">- Select Source of Funds -</option>
+                <option value="Salary">Salary</option>
+                <option value="Business Revenue">Business Revenue</option>
+                <option value="Commission">Commission</option>
+                <option value="Professional Fees">Professional Fees</option>
+                <option value="Remitance">Remitance</option>
+                <option value="Pension">Pension</option>
+                <option value="Savings/Deposits/Investment">Savings/Deposits/Investment</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+          <h5>Current Residence</h5>
+          <div class="row mt-4">
+            <div class="col-lg-4">
+              <label for="country" class="form-check-label"><span class="text-danger">*</span> Country</label>
+              <input type="text" class="form-control form-control-sm" id="country" required name="country">
+            </div>
+            <div class="col-lg-4">
+              <label for="province" class="form-check-label"><span class="text-danger">*</span> State/Province</label>
+              <input type="text" class="form-control form-control-sm" id="province" required name="province">
+            </div>
+            <div class="col-lg-4">
+              <label for="city" class="form-check-label"><span class="text-danger">*</span> City/Town</label>
+              <input type="text" class="form-control form-control-sm" id="city" required name="city">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-4">
+              <label for="barangay" class="form-check-label"><span class="text-danger">*</span> District/Barangay</label>
+              <input type="text" class="form-control form-control-sm" id="barangay" required name="barangay">
+            </div>
+            <div class="col-lg-4">
+              <label for="houseNo" class="form-check-label"><span class="text-danger">*</span> House No./Unit No./Building Name/Street</label>
+              <input type="text" class="form-control form-control-sm" id="houseNo" required name="houseno">
+            </div>
+            <div class="col-lg-4">
+              <label for="lengthOfStay" class="form-check-label"><span class="text-danger">*</span> Length Of Stay</label>
+              <select name="length_of_stay" id="los" class="form-select form-select-sm"
+                                    required>
+                <option value="">- Select Length of Stay - </option>
+                <option value="Less than a year">Less than a year</option>
+                <option value="1 to 2 years">1 to 2 Years</option>
+                <option value="2 to 5 years">2 to 5 Years</option>
+                <option value="5 years">5 years or more</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-12">
+              <label for="residenceType" class="form-check-label"><span class="text-danger">*</span> Type Of Residence</label>
+              <select name="residence_type" id="residenceType" class="form-select form-select-sm input"
+                                    required>
+                <option value="">- Select Type of Residence -</option>
+                <option value="Free or Living with Parents/Relatives">Used Free or Living with
+                Parents/Relatives</option>
+                <option value="Owned">Owned (Fully Paid)</option>
+                <option value="Rent">Renting</option>
+                <option value="Owned (Amortizing a Housing Loan)">Owned (Amortizing a Housing Loan) </option>
+              </select>
+            </div>
+          </div>
+        </div>
+		  <br>
+        <div class="form-check mt-3">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label for="exampleCheck1"><span class="text-danger">*</span> I agree that I have read that <a
+                                href="https://mlhuillier.com/privacy-notice/">Privacy
+            Policy.</a></label>
+        </div>
+		  <br>
+        <div class="form-group m-3">
+          <div class="row justify-content-center">
+            <button type="submit" class="btn btn-md btn-danger" id="submitBtn">Submit Application</button>
+          </div>
+        </div>
+      </form>
+      <!-- TOAST -->
+      <div class="toast-container position-fixed top-0 end-0 p-3 mx-auto">
+        <div id="liveToast" class="toast align-items-center border-0 bg-danger" role="alert"
+                    aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body" id="toast-body"> </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                            aria-label="Close" onclick="subMitForm()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted text-center">
+      <p class="m-0" style="font-size: 0.9rem;color: rgb(172, 169, 169)">Copyright © <span id="footer-year">2023</span> MLhuillier Financial Services, Inc.</p>
+      <p class="m-0" style="font-size: 0.9rem;color: rgb(172, 169, 169)">All Rights Reserved.</p>
+    </div>
+  </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- <script src="../js/jquery-3.4.1.min.js"></script>  -->
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<!-- <script src="../js/popper.min.js"></script>  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script> 
+<script src="../scripts/application-script.js"></script>
+</body>
+</html>

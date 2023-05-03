@@ -1,0 +1,34 @@
+{
+  "name": "mlhousingloan",
+  "version": "1.0.0",
+  "description": "ml housing loan",
+  "main": "mlhousingloan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon mlhousingloan.js"
+  },
+  "keywords": [
+    "mlhuillier",
+    "mlhuillierhousing"
+  ],
+  "author": "MLhuillier Financial Services Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "googleapis": "^118.0.0",
+    "html-pdf": "^3.0.1",
+    "log4js": "^6.9.1",
+    "mysql2": "^3.2.3",
+    "nodemailer": "^6.9.1",
+    "nodemailer-express-handlebars": "^6.1.0",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  }
+}
