@@ -28,8 +28,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/apply-loan', function(req, res) {
-//     res.render('applicationForm')
-    res.sendFile( path.resolve('Views/applicationForm.ejs') );
+    res.render('applicationForm')
+    // res.sendFile( path.resolve('Views/applicationForm.ejs') );
 })
 
 app.use('/api', api.ROUTER);
