@@ -22,6 +22,7 @@
     "googleapis": "^118.0.0",
     "html-pdf": "^3.0.1",
     "log4js": "^6.9.1",
+    "mysql2": "^3.2.4",
     "nodemailer": "^6.9.1",
     "nodemailer-express-handlebars": "^6.1.0",
     "nodemon": "^2.0.22",
