@@ -14,7 +14,7 @@ const path = require('path');
 
 app.use(cors({
     // allowedHeaders: true,
-    origin: 'http://127.0.0.1:27142',
+//     origin: 'http://127.0.0.1:27142',
 }))
 
 app.use(express.urlencoded({
