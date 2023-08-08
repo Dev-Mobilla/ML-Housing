@@ -1,0 +1,134 @@
+INFO 2023-05-24T09:32:04.054 ApplicationController - createApplication - setId 38
+INFO 2023-05-24T09:32:04.061 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T09:32:04.065 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T09:32:04.268 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T09:32:04.269 ApplicationController - PROCEED TO BPI FOLDER  - HL-230524-000039
+INFO 2023-05-24T09:32:07.142 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T09:32:11.243 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+ERROR 2023-05-24T09:32:28.629 ApplicationController -   Service Error  - Error: connect ETIMEDOUT 158.101.89.15:443: code - 3
+INFO 2023-05-24T09:38:17.174 ApplicationController - createApplication - setId 39
+INFO 2023-05-24T09:38:17.185 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T09:38:17.189 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T09:38:17.399 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T09:38:17.399 ApplicationController - FILIPINO: PROCEED TO ML LOANS FOLDER, REFINANCE  - HL-230524-000040
+INFO 2023-05-24T09:38:17.494 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T09:38:21.877 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+ERROR 2023-05-24T09:38:38.972 ApplicationController -   Service Error  - Error: connect ETIMEDOUT 158.101.89.15:443: code - 3
+INFO 2023-05-24T13:17:53.386 ApplicationController - createApplication - setId 40
+INFO 2023-05-24T13:17:53.395 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T13:17:53.399 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T13:17:53.592 ApplicationController - createApplication  - get data from the database.
+ERROR 2023-05-24T13:17:56.098 ApplicationController -   Service Error  - TypeError: Cannot read properties of undefined (reading 'mobileno'): code - 3
+INFO 2023-05-24T13:17:53.593 ApplicationController - PROCEED TO BPI FOLDER  - HL-230524-000041
+INFO 2023-05-24T13:17:56.093 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T13:18:01.498 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T13:20:35.625 ApplicationController - createApplication - setId 41
+INFO 2023-05-24T13:20:35.632 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T13:20:35.635 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T13:20:35.835 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T13:20:35.836 ApplicationController - PROCEED TO BPI FOLDER  - HL-230524-000042
+INFO 2023-05-24T13:20:35.896 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T13:20:37.201 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T13:20:37.202 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T13:20:37.203 ApplicationController - send response to the client  - undefined: 1, [object Object]
+INFO 2023-05-24T13:20:40.244 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T13:32:27.893 ApplicationController - createApplication - setId 42
+INFO 2023-05-24T13:32:27.898 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T13:32:27.901 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T13:32:28.090 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T13:32:28.092 ApplicationController - FILIPINO: PROCEED TO ML LOANS FOLDER, REFINANCE  - HL-230524-000043
+INFO 2023-05-24T13:32:28.167 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T13:32:29.335 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T13:32:29.336 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T13:32:29.337 ApplicationController - send response to the client  - undefined: 1, [object Object]
+INFO 2023-05-24T13:32:32.660 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T13:34:34.905 ApplicationController - createApplication - setId 43
+INFO 2023-05-24T13:34:34.906 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T13:34:34.908 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T13:34:35.084 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T13:34:35.084 ApplicationController - PROCEED TO DENIED FOLDER, GMI IS LESS THAN 25K  - HL-230524-000044
+INFO 2023-05-24T13:34:35.178 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T13:34:36.140 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T13:34:36.140 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T13:34:36.142 ApplicationController - send response to the client  - undefined: 2, [object Object]
+INFO 2023-05-24T13:34:39.535 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T14:01:54.510 ApplicationController - createApplication - setId 44
+INFO 2023-05-24T14:01:54.515 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T14:01:54.518 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T14:01:54.717 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T14:01:54.718 ApplicationController - PROCEED TO DENIED FOLDER, GMI IS LESS THAN 25K  - HL-230524-000045
+INFO 2023-05-24T14:01:57.099 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T14:01:58.465 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T14:01:58.465 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T14:01:58.467 ApplicationController - send response to the client  - undefined: 2, [object Object]
+INFO 2023-05-24T14:02:01.798 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T14:17:56.962 ApplicationController - createApplication - setId 45
+INFO 2023-05-24T14:17:56.967 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T14:17:56.971 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T14:17:58.539 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T14:17:58.539 ApplicationController - PROCEED TO BPI FOLDER  - HL-230524-000046
+INFO 2023-05-24T14:18:01.041 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T14:18:02.336 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T14:18:02.336 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T14:18:02.339 ApplicationController - send response to the client  - undefined: 1, [object Object]
+INFO 2023-05-24T14:18:06.217 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:23:24.604 ApplicationController - createApplication - setId 46
+INFO 2023-05-24T15:23:24.616 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:23:24.622 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:23:24.831 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:23:27.321 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:23:29.344 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:23:29.344 checkFilipinoApplication - FILIPINO: PROCEED TO BPI FOLDER LOAN TYPE: House and Lot - HL-230524-000047
+INFO 2023-05-24T15:23:29.345 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:23:29.347 ApplicationController - send response to the client Success - undefined: 1, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:23:32.668 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:25:15.595 ApplicationController - createApplication - setId 47
+INFO 2023-05-24T15:25:15.597 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:25:15.600 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:25:15.771 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:25:15.828 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:25:16.668 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:25:16.668 checkFilipinoApplication - FILIPINO: PROCEED TO DENIED FOLDER, GMI IS LESS THAN 25K LOAN TYPE: House and Lot - HL-230524-000048
+INFO 2023-05-24T15:25:16.668 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:25:16.675 ApplicationController - send response to the client Success - undefined: 2, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:25:20.179 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:26:16.392 ApplicationController - createApplication - setId 48
+INFO 2023-05-24T15:26:16.393 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:26:16.395 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:26:16.708 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:26:16.773 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:26:17.452 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:26:17.452 checkFilipinoApplication - FILIPINO: PROCEED TO BPI FOLDER LOAN TYPE: Refinance - HL-230524-000049
+INFO 2023-05-24T15:26:17.452 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:26:17.455 ApplicationController - send response to the client Success - undefined: 1, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:26:20.902 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:29:13.747 ApplicationController - createApplication - setId 49
+INFO 2023-05-24T15:29:13.747 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:29:13.748 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:29:13.955 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:29:14.033 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:29:14.920 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:29:14.920 checkForeignerApplication - FOREIGNER: PROCEED TO DENIED FOLDER, NOT CONDO LOAN TYPE: House and Lot - HL-230524-000050
+INFO 2023-05-24T15:29:14.920 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:29:14.920 ApplicationController - send response to the client Success - undefined: 2, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:29:18.292 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:43:35.719 ApplicationController - createApplication - setId 50
+INFO 2023-05-24T15:43:35.726 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:43:35.731 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:43:35.923 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:43:36.035 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:43:37.335 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:43:37.335 checkFilipinoApplication - FILIPINO: PROCEED TO BPI FOLDER LOAN TYPE: House and Lot - HL-230524-000051
+INFO 2023-05-24T15:43:37.336 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:43:37.337 ApplicationController - send response to the client Success - undefined: 1, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:43:40.590 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
+INFO 2023-05-24T15:58:25.936 ApplicationController - createApplication - setId 51
+INFO 2023-05-24T15:58:25.941 ApplicationController - createApplication - convertDate 24 May 2023
+INFO 2023-05-24T15:58:25.946 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-24T15:58:26.131 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-24T15:58:26.196 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-24T15:58:27.596 SmsController - sendSmsNotification  - {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:58:27.596 checkForeignerApplication - FOREIGNER: PROCEED TO BPI FOLDER LOAN TYPE: Condo - HL-230524-000052
+INFO 2023-05-24T15:58:27.597 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-24T15:58:27.599 ApplicationController - send response to the client Success - undefined: 1, {"code":"1","message":"Message Sent Successfully","mobileno":"9071152272","sender":"MLHUILLIER"}
+INFO 2023-05-24T15:58:30.534 DriveController - UploadFileToDrive:  Stored in Drive - {"kind":"drive#file","id":"1OJD37ZP7A7ytTJTdrXGupIiQbs_nUWjF","name":"Home Loan - HL-230524-000052","mimeType":"application/pdf"}: code - 1

@@ -2,50 +2,45 @@ const { DataTypes } = require('sequelize');
 
 const dbInstance = require('../config/dbConfig');
 
-const application = dbInstance.define("loan_application", {
+const ApplicationTypeModel = require('../Models/ApplicationType.Model');
+const LoanProvider = require('./LoanProvider.Model');
+
+const ApplicationList = dbInstance.define("application_list", {
     id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER
     },
-    applicationId: {
+    application_reference: {
         allowNull: false,
         type: DataTypes.STRING
     },
-    applicationType: {
+    application_type: {
+        allowNull: false,
+        type: DataTypes.STRING,
+    },
+    application_date: {
         allowNull: false,
         type: DataTypes.STRING
     },
-    date: {
+    loan_provider: {
         allowNull: false,
-        type: DataTypes.STRING
-    },
-    citizenship: {
-        allowNull: false,
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
     },
     firstname: {
         allowNull: false,
-        type: DataTypes.STRING
-    },
-    middlename: {
-        allowNull: true,
         type: DataTypes.STRING
     },
     lastname: {
         allowNull: false,
         type: DataTypes.STRING
     },
-    civil_status: {
-        allowNull: false,
+    suffix: {
+        allowNull: true,
         type: DataTypes.STRING
     },
     birth_date: {
-        allowNull: false,
-        type: DataTypes.STRING
-    },
-    name_of_mother: {
         allowNull: false,
         type: DataTypes.STRING
     },
@@ -53,11 +48,11 @@ const application = dbInstance.define("loan_application", {
         allowNull: false,
         type: DataTypes.STRING
     },
-    gross_monthly_income: {
+    citizenship: {
         allowNull: false,
         type: DataTypes.STRING
     },
-    source_of_funds: {
+    civil_status: {
         allowNull: false,
         type: DataTypes.STRING
     },
@@ -65,7 +60,23 @@ const application = dbInstance.define("loan_application", {
         allowNull: false,
         type: DataTypes.STRING
     },
-    length_of_stay: {
+    mobile_number: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    email_address: {
+        allowNull: true,
+        type: DataTypes.STRING,
+    },
+    source_of_funds: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    gross_monthly_income: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
+    mother_maiden_name: {
         allowNull: false,
         type: DataTypes.STRING
     },
@@ -73,29 +84,26 @@ const application = dbInstance.define("loan_application", {
         allowNull: false,
         type: DataTypes.STRING
     },
-    mobile_number: {
+    length_of_stay: {
         allowNull: false,
         type: DataTypes.STRING
     },
-    email: {
-        allowNull: true,
-        type: DataTypes.STRING,
-    },
-    confirmEmail: {
-        allowNull: true,
-        type: DataTypes.STRING,
-    },
-    app_status: {
+    application_status: {
         allowNull: true,
         type: DataTypes.STRING,
     }
 },
     {
-        createdAt: true,
-        updatedAt: true,
-        deletedAt: true,
-        tableName: "loan_application"
+        // createdAt: true,
+        // updatedAt: true,
+        // deletedAt: true,
+        timestamps: false,
+        tableName: "application_list"
     }
 )
 
-module.exports = application;
+
+// ApplicationList.hasOne(ApplicationTypeModel, { as : "application_type"});
+// ApplicationList.hasOne(LoanProvider, { as: 'loan_provider'})
+
+module.exports = ApplicationList;

@@ -13,9 +13,9 @@ const SendEmail = async (options) => {
 
     let send = SendEmail(
         {
-            subject: `M Lhuillier Housing Loan Application: ${appId}`,
+            subject: `M Lhuillier Home Loan Application: ${appId}`,
             to: reqEmail,
-            from: "'ML Housing Loan Service <donotreply@mlhuillier.com>'",
+            from: "'ML Home Loan Service <donotreply@mlhuillier.com>'",
             template: "requestorReceipt",
             context: {
                 application: application,

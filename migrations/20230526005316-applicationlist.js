@@ -3,47 +3,43 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-
-    await queryInterface.createTable('loan_application', {
+    await queryInterface.createTable('application_list', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      applicationId: {
+      application_reference: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      date: {
+      application_type: {
+        allowNull: false,
+        type: Sequelize.STRING,
+        
+      },
+      application_date: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      citizenship: {
+      loan_provider: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       firstname: {
         allowNull: false,
-        type: Sequelize.STRING
-      },
-      middlename: {
-        allowNull: true,
         type: Sequelize.STRING
       },
       lastname: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      civil_status: {
-        allowNull: false,
+      suffix: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       birth_date: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      name_of_mother: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -51,11 +47,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      gross_monthly_income: {
+      citizenship: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      source_of_funds: {
+      civil_status: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -63,7 +59,23 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      length_of_stay: {
+      mobile_number: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      email_address: {
+        allowNull: true,
+        type: Sequelize.STRING,
+      },
+      source_of_funds: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      gross_monthly_income: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      mother_maiden_name: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -71,25 +83,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      mobile_number: {
+      length_of_stay: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      email: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      deletedAt: {
+      application_status: {
         allowNull: true,
-        type: Sequelize.DATE
+        type: Sequelize.STRING,
       }
     })
     /**
@@ -101,7 +101,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('loan_application');
+    await queryInterface.dropTable('application_list');
     /**
      * Add reverting commands here.
      *

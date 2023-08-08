@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "housing-loan-api-387000",
+  "private_key_id": "f604f02c434d19a58e3649d0b19f67f738cd6d5d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4nZc3WPc0UXG6\n11lbbpJH7V5IBECE50ZUmNKNjqlA7+GKUCZE05i6NlDz/mSYstWCaVnSYI8u0VLF\nSiLBLKjooZvTVqvk6BLKBkwtnEiNXewdezepxxepeCiC2IXwJNYEa3JLYneOtGGO\nk36q5t6EYzCGgU1bqP2Ttl4dr7ThvvqBLQwq/HvMVMMIdk59mcH6sgPWrZBtUYsY\ni1mPb6vlilHO0+Jz/9iJjNLZ429DL9A+D6wCWA/l7btBSMdbD3frPkd1YHY/lspL\nwBBK9uGR/UHnCgnBTxxS6X5+roFjFLEX3Fk4dU4hiV8kcOZ+lOYULREx331K1JNQ\n0jksUe3NAgMBAAECggEACFtFyYES64DWQ41U46EdKPlTH7Jlkz5+vfyO505yVdil\n3mNjYBEt5BvqTSkSN6E8reMD6FRrlsRt2TVSXmkdmi4ahhXxwPJKS2++if/9frym\nH+2AZwR2izq/prCTW3vnXhrY+RWTcNe0ZMZDYQwDPX3Z5/S5YjFDjSifmPtnliJB\noCuQgw8W1ObqSfYhQlMwoJeOfWYrgtDY0YC62AawTv6et0RLcgNM/pOQlOCMDD0m\n1rZRrqr63kx7+/Tao37tKXj2FTrCSx9O6I4Fl5W2IweQH8ZL6u9/pBziXPO4F1mU\naSRjNLHW2Xa3lBHLykcZSXS5FnIYTvjSqAUC1LG0dwKBgQDwLd9LRymlzTssJ51O\nX7GMaW+xTQRMjCI0XvKJSqeIpd/OosQazIgG9Zg/KV6RSMxL/tO//rzPrEGRIuMm\nWBC+ZYmZLnqODE+l9FHoWQ9592ZURWWIRmv+p8mblMYmwe3x9GOXmaW0tXAQ65Uy\n0tf2vYojQjuuMrcyjBBgFrPCUwKBgQDExsCvcoHE9B5y3CbHNTYuxM4+87/h+hgG\n6colP8YUsRwPoVachbRmBPTHbfkSjSml1AojPsrMIbzhuH6EddnGpe1Ud+2r+ap3\nljellYo6XQrl6/6KQyWDypPfIXnNyW/yd1OeXGbJreUBhcJ42mQhNp6RUyrtmCsL\nhVCCgsfLXwKBgCu+LwzmyQ8Jcd142Y2MoCmSimUgQcgvPYuMP2AB2MFqdHiN7Gl1\nFtEtqazXPAH54Dt3DdnJ61lnZgmo8PXq1CHZHFZpwKheVaND/Cb1EXyFMn3mpbdM\nHB8lL/LGBdDJQSzv9bOGqEdhRCfQwDuhavPlUWNajMQNOJBcMh9OAy9BAoGAWYa3\nudsWEX6jr8xb1Dxwd1zRHTEW9wArGFIbx1C5lUZzJuVXm4T1a4kLuQRe0sLo1Oqg\n5iI2cCNVZTjkTu2zdD6fuNOLjbfch+YPUUW1CxKz16HEQDGGiuyK1HTNjwP768vA\nfoc5uL5mN4gcz5FFBxtrj2DQYiLeSrKPy6Emt28CgYEAmJkBeX7w0WcsvaJM+qw5\nKkVhjiQFvYtFx7ptizVv56XuKkjU5NQ4u0+Di2B1lufhLRx5RC0uVmQJk7M+5EqA\nmQCiHlzYo71b+iyHsl0xcd93/73gQ+WXCShRDk7t2nSK+0iF1j4QvF2aS6D8kc+D\nEu5tlsCrlJy4Ojrssqbzbno=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mlhousingloan@housing-loan-api-387000.iam.gserviceaccount.com",
+  "client_id": "117481461854771725105",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mlhousingloan%40housing-loan-api-387000.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -3,26 +3,22 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return Promise.all([
-      queryInterface.addColumn('loan_application', 'applicationType', {
+    await queryInterface.createTable('application_type', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+    },
+    application_type_code: {
         allowNull: false,
         type: Sequelize.STRING,
-        after:'applicationId'
-      }),
-      queryInterface.addColumn('loan_application', 'confirmEmail', {
-        allowNull: false,
+    },
+    label: {
+        allowNull: true,
         type: Sequelize.STRING,
-        after:'email'
-      }),
-      queryInterface.addColumn('loan_application', 'resident', {
-        allowNull: false,
-        type: Sequelize.STRING,
-        after:'date',
-        validate: {
-          isEmail: true
-      }
-      }),
-    ]);
+    }
+    })
     /**
      * Add altering commands here.
      *
@@ -32,6 +28,8 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
+    await queryInterface.dropTable('application_type');
+
     /**
      * Add reverting commands here.
      *

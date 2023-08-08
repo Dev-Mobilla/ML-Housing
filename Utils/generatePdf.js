@@ -25,6 +25,7 @@ function _streamToBuffer(stream, cb) {
         chunks.push(chunk);
     });
     stream.on('end', () => {
+        console.log('_streamToBuffer', chunks);
         return cb(null, Buffer.concat(chunks));
     });
     stream.on('error', (e) => {

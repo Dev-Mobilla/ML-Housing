@@ -1,152 +1,201 @@
-<div style="font-family: sans-serif;">
-    <h5 style="float:right;margin: 20px 20px 0px 20px">ML HOUSING LOAN</h5>
-    <div style="margin: 20px 0px 0px 0px">
-        <img src="http://127.0.0.1:8080/assets/hl.png" alt="ml_logo"
-            style="padding-right: 0;padding-left: 0px;width: 23%;height: 120px;">
-    </div>
-    <br>
-    <table style="margin:auto;border-collapse: collapse;width:40%; table-layout: fixed">
-        <tr>
-            <td><span style="padding:5px 0px;font-weight: 600;font-size:0.9rem"> Application No:</span></td>
-            <td style="padding:5px 0px;font-size:0.9rem">{{ data.applicationId }}</td>
-        </tr>
-        <tr>
-            <td><span style="font-weight: 600;padding:5px 0px;font-size:0.9rem"> Date:</span></td>
-            <td style="padding:5px 0px;font-size:0.9rem">{{ data.date }}</td>
-        </tr>
-         <tr>
-            <td><span style="font-weight: 600;padding:5px 0px;font-size:0.9rem"> Applied For:</span></td>
-            <td style="padding:5px 0px;font-size:0.9rem">{{ data.applicationType }}</td>
-        </tr>
-    </table>
-    <br>
-    <div>
-        <table style="margin:auto;text-align:justify;border-collapse: collapse;width:95%; table-layout: fixed">
-            <thead>
-                <tr style="border: 1px solid #c1c1c1;">
-                    <th style="padding:10px;font-size:0.8rem">
-                        PERSONAL INFORMATION
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-size:0.8rem">First Name
-                    </td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.firstname}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Middle Name</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.middlename}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Last Name</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.lastname}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Civil Status</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.civil_status}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Date of Birth</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.birth_date}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Mother's Maiden Name</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.name_of_mother}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Gender</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.gender}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Gross Household Monthly
-                        Income</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.gross_monthly_income}}
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Source of Funds</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.source_of_funds}}</td>
-                </tr>
-                <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Filipino Resident</td>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                        {{data.resident}}</td>
-                </tr>
-            </tbody>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    </style>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif;">
+    <div style="font-size: 0.8rem">
+        <h5 style="float:right;margin: 20px 20px 0px 20px;font-family: 'Roboto', sans-serif;font-weight:700">
+            ML HOUSING LOAN</h5>
+        <div style="margin: 20px 0px 0px 0px">
+            <img src="http://127.0.0.1:8080/assets/hlLogo.png" alt="ml_logo"
+                style="padding-right: 0;padding-left: 0px;width: 40%;height: 35px;">
+        </div>
+        <br>
+        <br>
+        <table style="margin:auto;border-collapse: collapse;width:47%; table-layout: fixed">
+            <tr>
+                <td><span
+                        style="padding:5px 0px;font-weight: 700;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                        Application No:</span></td>
+                <td style="padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                    {{ data.application_reference }}</td>
+            </tr>
+            <tr>
+                <td><span
+                        style="font-weight: 600;padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                        Date:</span></td>
+                <td style="padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                    {{ data.application_date }}</td>
+            </tr>
+            <tr>
+                <td><span
+                        style="font-weight: 600;padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                        Applied For:</span></td>
+                <td style="padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;font-weight: 400;">
+                    {{ data.application_type }}</td>
+            </tr>
+            <tr>
+                <td><span
+                        style="font-weight: 600;padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                        Loan Provider:</span></td>
+                <td style="padding:5px 0px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                    {{ data.loan_provider }}</td>
+            </tr>
         </table>
         <br>
-        <hr style="width: 80%;">
-        <br>
-        <table style="margin:auto;text-align:justify;border-collapse: collapse;width:95%; table-layout: fixed">
-            <thead>
-                <tr style="border: 1px solid #c1c1c1;">
-                    <th style="padding:10px;font-size:0.8rem">
-                        CURRENT RESIDENCE
-                    </th>
-                    <th></th>
+        <div>
+            <table style="margin:auto;text-align:justify;border-collapse: collapse;width:95%; table-layout: fixed">
+                <thead>
+                    <tr style="border: 1px solid #c1c1c1;">
+                        <th
+                            style="padding:10px;font-size: 9px;font-family: 'Roboto', sans-serif;">
+                            PERSONAL INFORMATION
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">First Name
+                        </td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.firstname}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Middle Name</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.suffix}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Last Name</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.lastname}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Civil Status</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.civil_status}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Date of Birth</td>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">
+                            {{data.birth_date}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Mother's Maiden Name</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.mother_maiden_name}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Gender</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Gross Household Monthly
+                            Income</td>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">
+                            Php {{data.gross_monthly_income}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Source of Funds</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.source_of_funds}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Citizenship</td>
+                        <td
+                            style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                            {{data.citizenship}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <hr style="width: 80%;">
+            <br>
+            <table style="margin:auto;text-align:justify;border-collapse: collapse;width:95%; table-layout: fixed">
+                <thead>
+                    <tr style="border: 1px solid #c1c1c1;">
+                        <th style="padding:10px;font-size:0.55rem">
+                            CURRENT RESIDENCE
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Address</td>
+                    <td
+                        style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                        {{data.address}}</td>
                 </tr>
-            </thead>
-            <tr>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Address</td>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                    {{data.address}}</td>
-            </tr>
-            <!-- <tr>
-                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Country</td>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{data.firstname}}</td>
+                <!-- <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Country</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">{{data.firstname}}</td>
                 </tr>
                 <tr>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;">State/Province</td>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{application.firstname}}</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;">State/Province</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">{{application.firstname}}</td>
                 </tr>
                 <tr>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;">City/Town</td>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{application.firstname}}</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;">City/Town</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">{{application.firstname}}</td>
                 </tr>
                 <tr>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;">District/Barangay</td>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{application.firstname}}</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;">District/Barangay</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">{{application.firstname}}</td>
                 </tr>
                 <tr>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem">House No./Unit No./Building Name/Street</td>
-                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{application.firstname}}</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size:0.55rem">House No./Unit No./Building Name/Street</td>
+                    <td style="padding:10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">{{application.firstname}}</td>
                 </tr> --}} -->
-            <tr>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Length of Stay</td>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                    {{data.length_of_stay}}</td>
-            </tr>
-            <tr>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Type of Residence</td>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                    {{data.residence_type}}</td>
-            </tr>
-            <tr>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Mobile No.</td>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">
-                    {{data.mobile_number}}</td>
-            </tr>
-            <tr>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;">Email Address</td>
-                <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size:0.8rem;font-weight:500;">{{data.email}}
-                </td>
-            </tr>
-        </table>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Length of Stay</td>
+                    <td
+                        style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                        {{data.length_of_stay}}</td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Type of Residence</td>
+                    <td
+                        style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;text-transform: capitalize">
+                        {{data.residence_type}}</td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Mobile No.</td>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">
+                        {{data.mobile_number}}</td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;">Email Address</td>
+                    <td style="padding:6px 10px;border: 1px solid #c1c1c1;font-size: 9px;font-weight:300;">
+                        {{data.email_address}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="pageFooter" style="text-align: center;">
+            <span style="font-size:7px;color: red;font-style:italic;font-family: 'Roboto', sans-serif;">** This document is computer generated and does
+                not
+                require any signature to be considered valid **</span>
+        </div>
     </div>
-    <div id="pageFooter" style="text-align: center;">
-        <span style="font-size:10px;color: red;font-style:italic;">** This document is computer generated and does not
-            require any signature to be considered valid **</span>
-    </div>
-</div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+INFO 2023-05-27T09:11:20.838 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T09:11:20.841 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:36:58.044 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:36:58.050 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:38:30.604 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:38:30.611 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:40:32.094 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:40:32.097 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:41:48.702 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:41:48.705 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:42:15.947 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:42:15.951 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T14:45:14.713 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T14:45:14.720 ApplicationController - createApplication - convertDate May 27 2023
+INFO 2023-05-27T15:01:28.143 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T15:02:48.502 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T15:03:17.388 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T15:04:25.455 ApplicationController - createApplication - setId 0
+INFO 2023-05-27T15:12:46.536 ApplicationController - createApplication - setId 0
+ERROR 2023-05-27T15:12:46.622 ApplicationController - Service Error  - SequelizeDatabaseError: Unknown column 'createdAt' in 'field list': code - 3
+INFO 2023-05-27T15:15:31.338 ApplicationController - createApplication - setId 0

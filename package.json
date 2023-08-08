@@ -15,23 +15,26 @@
   "author": "MLhuillier Financial Services Inc.",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^0.21.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "googleapis": "^118.0.0",
+    "googleapis": "^105.0.0",
     "html-pdf": "^3.0.1",
+    "html-pdf-node": "^1.0.8",
+    "jspdf": "^2.5.1",
     "log4js": "^6.9.1",
-    "mysql2": "^3.2.4",
+    "mysql2": "^3.3.2",
     "nodemailer": "^6.9.1",
     "nodemailer-express-handlebars": "^6.1.0",
     "nodemon": "^2.0.22",
     "phantomjs-prebuilt": "^2.1.16",
-    "sequelize": "^6.31.0"
-  },
-  "devDependencies": {
-    "sequelize-cli": "^6.6.0"
+    "sequelize": "^6.31.0",
+    "sequelize-cli": "^6.6.0",
+    "wkhtmltopdf": "^0.4.0"
   },
   "engines": {
     "node": ">=14"

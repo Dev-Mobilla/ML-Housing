@@ -1,0 +1,1 @@
+const insertNew = "INSERT INTO loan_application (applicationId, applicationType,date, resident,firstname, middlename, lastname,civil_status,birth_date,name_of_mother,gender,gross_monthly_income,source_of_funds,address,length_of_stay,residence_type,mobile_number, email,confirmEmail) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"

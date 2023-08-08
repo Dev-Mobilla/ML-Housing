@@ -1,0 +1,13 @@
+{
+    "installed": {
+        "client_id": "895408374577-ehuiedf7c164493fq4posr6in1e15im8.apps.googleusercontent.com",
+        "project_id": "housing-loan-api",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "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",
+        "redirect_uris": [
+            "http://localhost"
+        ]
+    }
+}

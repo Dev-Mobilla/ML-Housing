@@ -1,0 +1,8 @@
+INFO 2023-05-23T13:21:44.930 ApplicationController - createApplication - setId 37
+INFO 2023-05-23T13:21:44.934 ApplicationController - createApplication - convertDate 23 May 2023
+INFO 2023-05-23T13:21:44.939 ApplicationController - createApplication  - insert data to the database
+INFO 2023-05-23T13:21:45.134 ApplicationController - createApplication  - get data from the database.
+INFO 2023-05-23T13:21:47.951 ApplicationController - GenerateAndStorePdf -  responseMesage - undefined
+INFO 2023-05-23T13:21:47.951 ApplicationController - checkApplication  - check application if denied or to be process.
+INFO 2023-05-23T13:21:47.952 ApplicationController - send response to the client  - undefined: 2
+INFO 2023-05-23T13:21:53.739 DriveController - UploadFileToDrive:  Stored in Drive - [object Object]: code - 1
